@@ -12,6 +12,10 @@ class clientes(models.Model):
 class Almacen(models.Model):
     nombre = models.CharField(max_length=60)
     lugar = models.IntegerField()
+    
+    def __str__(self):
+        return 'El nombre es %s y el lugar es %s' %(self.nombre,self.lugar)
+
 
 class Pedidos(models.Model):
     folio = models.IntegerField()
